@@ -11,7 +11,7 @@ ii) The test results of the Lagragian-based approaches and CVPO approach.
 
 iii) The figures are in high resolution in the paper.
 
-vi) the auxiliary code to read the data from ii)
+vi) The auxiliary code in Python for reading the data ii).
 
 If readers have further questions on this paper and PEC design,
 don't hesitate to contact me via ycyan@connect.hku.hk for a discussion.
