@@ -9,7 +9,7 @@ i)  the training results of the Lagragian-based approaches and CVPO approach.
 
 ii) the test results of the Lagragian-based approaches and CVPO approach.
 
-iii) the figure with high resolution in the paper.
+iii) the figures in high resolution on the paper.
 
 vi) the auxiliary code to read the data from ii)
 
