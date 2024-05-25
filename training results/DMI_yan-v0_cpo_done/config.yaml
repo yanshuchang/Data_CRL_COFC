@@ -1,0 +1,9 @@
+task:   "DMI_yan-v0"
+thread:     2
+seed:       10
+cost_limit: 1.5
+hidden_sizes: [128, 128]
+unbounded: False
+last_layer_scale: False
+use_lagrangian: True
+exploration_noise: 0.1

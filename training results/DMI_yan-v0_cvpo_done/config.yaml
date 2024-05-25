@@ -1,0 +1,6 @@
+task:   "DMI_yan-v0"
+thread: 2
+seed:   10
+hidden_sizes: [128, 128]
+unbounded: False
+last_layer_scale: False
