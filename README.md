@@ -9,7 +9,7 @@ i)  The training results of the Lagragian-based approaches and CVPO approach.
 
 ii) The test results of the Lagragian-based approaches and CVPO approach.
 
-iii) The figures are in high resolution in the paper.
+iii) The paper's high-resolution figures (dpi = 1000).
 
 vi) The auxiliary code in Python for reading the data ii).
 
