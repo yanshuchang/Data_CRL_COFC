@@ -15,5 +15,4 @@ vi) The auxiliary code in Python for reading the data in ii).
 
 v) Training parameters for this work.
 
-If readers have further questions on this paper and PEC design,
-do not hesitate to contact me via ycyan@connect.hku.hk for a discussion.
+If readers have further questions or ideas about this paper and its possible extension, please email me at ycyan@connect.hku.hk to discuss them.
