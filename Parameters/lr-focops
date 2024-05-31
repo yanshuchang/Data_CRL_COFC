@@ -1,7 +1,7 @@
 float cost_limit:                the constraint threshold. Default value is 1.50.
 str device:                      The device to use for training and inference, "cpu".
 int thread:                      The number of threads to use for training, ignored if `device` is "cuda".
-int seed:                        The random seed for reproducibility, default to 10.
+int seed:                        The random seed for reproducibility, 10.
 float actor_lr:                  the learning rate of the actor network, 5e-4.
 float critic_lr:                 the learning rate of the critic network, 1e-3.
 Tuple[int, ...]                  hidden_sizes: The sizes of the hidden layers for the policy and value networks, (128, 128).
