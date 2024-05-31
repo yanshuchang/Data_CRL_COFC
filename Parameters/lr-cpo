@@ -1,3 +1,5 @@
+lr-CPO
+
 float cost_limit:               The maximum constraint cost allowed. (1.50)
 str device:                     The device to use for training and inference. ('cpu')
 int seed:                       The random seed for reproducibility. ('10')
