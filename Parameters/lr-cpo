@@ -1,1 +1,23 @@
-
+float cost_limit:               The maximum constraint cost allowed, 1.50.
+str device:                     The device to use for training and inference, default to "cpu".
+int thread:                     The number of threads to use for training, ignored if `device` is "cuda", 4.
+int seed:                       The random seed for reproducibility, 10.
+float lr:                       The learning rate, 1e-3.
+Tuple[int, ...] hidden_sizes:   The sizes of the hidden layers for the policy and value networks, (128, 128).
+bool unbounded:                 Whether the action space is unbounded, False.
+bool last_layer_scale:          Whether to scale the last layer output for the policy network, False.
+float target_kl:                The target KL divergence for the policy update, 0.01.
+float backtrack_coeff:          The coefficient for backtracking, 0.8.
+float damping_coeff:            The coefficient for the damping,  0.1.
+int max_backtracks:             The maximum number of backtracking steps, 10.
+int optim_critic_iters:         The number of iterations to optimize the critic, 10.
+float l2_reg:                   The L2 regularization coefficient, 0.001.
+float gae_lambda:               The lambda parameter for generalized advantage estimation, 0.98.
+bool advantage_normalization:   Whether to normalize advantages, True.
+float gamma:                    The discount factor for future rewards and costs, 0.99.
+int max_batchsize:              The maximum batch size for computing advantages etc, 99999.
+bool reward_normalization:      Whether to normalize rewards, default to False.
+bool deterministic_eval:        Whether to use deterministic actions during evaluation, True.
+bool action_scaling:            Whether to scale the action space, True.
+str action_bound_method:        The method to bound actions ("clip" or "tanh"), "clip".
+Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: A learning rate scheduler, None.
