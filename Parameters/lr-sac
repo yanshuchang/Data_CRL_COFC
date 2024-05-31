@@ -15,7 +15,7 @@ float tau:                       Target smoothing coefficient for soft update of
 int n_step:                      Number of steps for multi-step learning. (2)
 bool use_lagrangian:             Whether to use the Lagrangian constraint optimization. (True)
 List lagrangian_pid:             The PID coefficients for the Lagrangian constraint optimization. ([0.5, 0.001, 0.1])
-bool rescaling: whether use the rescaling trick for Lagrangian multiplier, see Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
+bool rescaling:                  whether use the rescaling trick for Lagrangian multiplier, see Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
 float gamma:                     The discount factor for future rewards. (0.98)
 bool conditioned_sigma:          Whether the variance of the Gaussian policy is conditioned on the state (True).
 bool unbounded:                  Whether the action space is unbounded. (False)
