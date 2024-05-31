@@ -19,7 +19,6 @@ int optim_critic_iters:           The number of optimization iterations for the 
 float gae_lambda:                 The GAE lambda value (0.95).
 bool advantage_normalization:     Whether to normalize advantage (True).
 bool use_lagrangian:              Whether to use the Lagrangian constraint optimization (True).
-List lagrangian_pid:              The PID coefficients for the Lagrangian constraint optimization ([0.5, 0.001, 0.1]).
 bool rescaling:                   Whether use the rescaling trick for Lagrangian multiplier, see
         Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
 float gamma:                      The discount factor for future rewards (0.98).
