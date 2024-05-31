@@ -1,3 +1,6 @@
+CVPO
+
+
 int cost_limit:                    The cost limit of the task. (1.50)
 str device:                        The device to use for training ('cpu').
 str thread:                        The number of threads to use for training when using the CPU. (We have 2 Intel Core i5)
