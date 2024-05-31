@@ -1,4 +1,4 @@
-    """Trust Region Policy Optimization (TRPO) with PID Lagrangian agent.
+lr-trpo
 
     More details, please refer to https://arxiv.org/abs/1502.05477 (TRPO) and
     https://arxiv.org/abs/2007.03964 (PID Lagrangian).
