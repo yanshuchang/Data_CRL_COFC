@@ -1,18 +1,23 @@
-float cost_limit:                                         The maximum constraint cost allowed, 1.50.
-str device:                                               The device to use for training and inference, "cpu".
-int thread:                                               The number of threads to use for training, ignored if `device` is "cuda", default to 4.
-int seed:                                                 The random seed for reproducibility, 10.
-float actor_lr:                                           The learning rate of the actor network  (5e-4).
-float critic_lr:                                          The learning rate of the critic network (1e-3).
-Tuple[int, ...] hidden_sizes:                             The sizes of the hidden layers in the actor and critic networks ((128, 128)).
-float tau:                                                The soft update coefficient for updating target networks. 0.05.
-Optional[BaseNoise] exploration_noise:                    The noise instance for exploration. Default is GaussianNoise(sigma=0.1).
-int n_step:                                               The number of steps for multi-step bootstrap targets. 2.
-bool use_lagrangian:                                      Whether to use the Lagrangian constraint optimization. True.
-List lagrangian_pid:                                      The PID coefficients for the Lagrangian constraint optimization. [0.5, 0.001, 0.1].
+lr-DDPG
+
+More details, please refer to https://arxiv.org/abs/1509.02971 (DDPG) and
+https://arxiv.org/abs/2007.03964 (PID Lagrangian).
+
+
+float cost_limit:                                         The maximum constraint cost allowed. (1.50)
+str device:                                               The device to use for training and inference. ("cpu")
+int seed:                                                 The random seed for reproducibility. (10)
+float actor_lr:                                           The learning rate of the actor network.  (5e-4)
+float critic_lr:                                          The learning rate of the critic network. (1e-3)
+Tuple[int, ...] hidden_sizes:                             The sizes of the hidden layers in the actor and critic networks. ((128, 128))
+float tau:                                                The soft update coefficient for updating target networks. (0.05)
+Optional[BaseNoise] exploration_noise:                    The noise instance for exploration. Default is GaussianNoise(sigma=0.1)
+int n_step:                                               The number of steps for multi-step bootstrap targets.  (2)
+bool use_lagrangian:                                      Whether to use the Lagrangian constraint optimization. (True)
+List lagrangian_pid:                                      The PID coefficients for the Lagrangian constraint optimization. ([0.5, 0.001, 0.1])
 bool rescaling:                                           Whether use the rescaling trick for Lagrangian multiplier, see Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
-float gamma:                                              The discount factor for future rewards. 0.98.
-bool deterministic_eval:                                  Whether to use deterministic action selection during evaluation. True.
-bool action_scaling:                                      Whether to scale the actions according to the action space bounds. True.
-str action_bound_method:                                  The method for handling actions that exceed the action space bounds ("clip" or other custom methods). "clip".
-Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: Learning rate scheduler for the optimizer. Default is None.
+float gamma:                                              The discount factor for future rewards. (0.98)
+bool deterministic_eval:                                  Whether to use deterministic action selection during evaluation.   (True)
+bool action_scaling:                                      Whether to scale the actions according to the action space bounds. (True)
+str action_bound_method:                                  The method for handling actions that exceed the action space bounds ("clip" or other custom methods). ("clip")
+Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: Learning rate scheduler for the optimizer.  (None)
