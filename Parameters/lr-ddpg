@@ -9,7 +9,7 @@ str device:                                               The device to use for 
 int seed:                                                 The random seed for reproducibility. (10)
 float actor_lr:                                           The learning rate of the actor network.  (5e-4)
 float critic_lr:                                          The learning rate of the critic network. (1e-3)
-Tuple[int, ...] hidden_sizes:                             The sizes of the hidden layers in the actor and critic networks. ((128, 128))
+Tuple[int, ...] hidden_sizes:                             The sizes of the hidden layers in the actor and critic networks. (128, 128)
 float tau:                                                The soft update coefficient for updating target networks. (0.05)
 Optional[BaseNoise] exploration_noise:                    The noise instance for exploration. Default is GaussianNoise(sigma=0.1)
 int n_step:                                               The number of steps for multi-step bootstrap targets.  (2)
