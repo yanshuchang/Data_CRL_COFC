@@ -1,1 +1,26 @@
+More details, please refer to https://arxiv.org/abs/1801.01290 (SAC) and
+    https://arxiv.org/abs/2007.03964 (PID Lagrangian).
 
+float cost_limit:                The constraint limit(s) for the Lagrangian optimization. (1.50)
+str device:                      The device to use for training and inference, "cpu".
+int thread:                      The number of threads to use for training, ignored if `device` is "cuda", 4.
+int seed:                        The random seed for reproducibility, 10.
+float actor_lr:                  The learning rate of the actor network (5e-4).
+float critic_lr:                 The learning rate of the critic network (1e-3).
+Tuple[int, ...] hidden_sizes:    The sizes of the hidden layers for the policy and value networks, (128, 128).
+bool auto_alpha:                 Whether to automatically tune "alpha", the temperature.  (True)
+float alpha_lr:                  The learning rate of learning "alpha" if ``auto_alpha`` is True. (3e-4)
+float alpha:                     Initial temperature for entropy regularization. (0.005)
+float tau:                       Target smoothing coefficient for soft update of target networks. (0.05)
+int n_step:                      Number of steps for multi-step learning. (2)
+bool use_lagrangian:             Whether to use the Lagrangian constraint optimization. (True)
+List lagrangian_pid:             The PID coefficients for the Lagrangian constraint optimization. ([0.5, 0.001, 0.1])
+bool rescaling: whether use the rescaling trick for Lagrangian multiplier, see Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
+float gamma:                     The discount factor for future rewards. (0.98)
+bool conditioned_sigma:          Whether the variance of the Gaussian policy is conditioned on the state (True).
+bool unbounded:                  Whether the action space is unbounded. (False)
+bool last_layer_scale:           Whether to scale the last layer output for the policy network. (False)
+bool deterministic_eval:         whether to use deterministic action selection during evaluation. (True)
+bool action_scaling:             whether to scale the actions according to the action space bounds. (True)
+str action_bound_method: the method for handling actions that exceed the action space bounds ("clip" or other custom methods). ("clip")
+Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: learning rate scheduler for the optimizer. (None)
