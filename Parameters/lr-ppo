@@ -1,27 +1,26 @@
-float cost_limit:                      The constraint limit(s) for the Lagrangian optimization. 10.
-str device:                            The device to use for training and inference, "cpu".
-int thread:                            The number of threads to use for training, ignored if `device` is "cuda".
-int seed:                              The random seed for reproducibility, 10.
-float lr:                              The learning rate, 5e-4.
-Tuple[int, ...] hidden_sizes:          The sizes of the hidden layers for the policy and value networks, (128, 128).
-bool unbounded:                        Whether the action space is unbounded, False.
-bool last_layer_scale:                 Whether to scale the last layer output for the policy network, False.
-float target_kl:                       The target KL divergence for the PPO update.  0.02.
-float vf_coef:                         The value function coefficient for the loss function. 0.25.
-Optional[float] max_grad_norm:         The maximum gradient norm for gradient clipping (None for no clipping).  None.
-float gae_lambda:                      The Generalized Advantage Estimation (GAE) parameter. 0.95.
-float eps_clip:                        The PPO clipping parameter for the policy update. 0.2.
-Optional[float] dual_clip:             The PPO dual clipping parameter (None for no dual clipping). None.
-bool value_clip:                       Whether to clip the value function update. False.
-bool advantage_normalization:          Whether to normalize the advantages. True.
-bool recompute_advantage:              Whether to recompute the advantages during the optimization process. False.
-bool use_lagrangian:                   Whether to use the Lagrangian constraint optimization. True.
-List lagrangian_pid:                   The PID coefficients for the Lagrangian constraint optimization. [0.05, 0.0005, 0.1].
+float cost_limit:                      The constraint limit(s) for the Lagrangian optimization. (1.50)
+str device:                            The device to use for training and inference. ("cpu")
+int seed:                              The random seed for reproducibility. (10)
+float lr:                              The learning rate. (5e-4)
+Tuple[int, ...] hidden_sizes:          The sizes of the hidden layers for the policy and value networks. (128, 128)
+bool unbounded:                        Whether the action space is unbounded. (False)
+bool last_layer_scale:                 Whether to scale the last layer output for the policy network. (False)
+float target_kl:                       The target KL divergence for the PPO update.  (0.02)
+float vf_coef:                         The value function coefficient for the loss function. (0.25)
+Optional[float] max_grad_norm:         The maximum gradient norm for gradient clipping (None for no clipping).  (None)
+float gae_lambda:                      The Generalized Advantage Estimation (GAE) parameter. (0.95)
+float eps_clip:                        The PPO clipping parameter for the policy update. (0.2)
+Optional[float] dual_clip:             The PPO dual clipping parameter (None for no dual clipping). (None)
+bool value_clip:                       Whether to clip the value function update. (False)
+bool advantage_normalization:          Whether to normalize the advantages. (True)
+bool recompute_advantage:              Whether to recompute the advantages during the optimization process. (False)
+bool use_lagrangian:                   Whether to use the Lagrangian constraint optimization. (True)
+List lagrangian_pid:                   The PID coefficients for the Lagrangian constraint optimization. ([0.5, 0.001, 0.1])
 bool rescaling:                        Whether use the rescaling trick for Lagrangian multiplier, see Alg. 1 in http://proceedings.mlr.press/v119/stooke20a/stooke20a.pdf
-float gamma:                           The discount factor for future rewards. 0.99.
+float gamma:                           The discount factor for future rewards. (0.98)
 int max_batchsize:                     The maximum size of the batch when computing GAE, depends on the size of available memory and the memory cost of the model; should be as large as possible within the memory constraint. 99999.
-bool reward_normalization:             Whether to normalize the rewards. False.
-bool deterministic_eval:               Whether to use deterministic actions during evaluation. True.
-bool action_scaling:                   Whether to scale actions based on the action space. True.
-str action_bound_method: the method used to handle out-of-bound actions. "clip".
-Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: The learning rate scheduler. None.
+bool reward_normalization:             Whether to normalize the rewards. (False).
+bool deterministic_eval:               Whether to use deterministic actions during evaluation. (True).
+bool action_scaling:                   Whether to scale actions based on the action space. (True).
+str action_bound_method: the method used to handle out-of-bound actions. ("clip").
+Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: The learning rate scheduler. (None).
