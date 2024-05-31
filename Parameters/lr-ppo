@@ -1,5 +1,8 @@
 lr-PPO
 
+More details, please refer to https://arxiv.org/abs/1707.06347 (PPO) and
+https://arxiv.org/abs/2007.03964 (PID Lagrangian).
+
 float cost_limit:                      The constraint limit(s) for the Lagrangian optimization. (1.50)
 str device:                            The device to use for training and inference. ("cpu")
 int seed:                              The random seed for reproducibility. (10)
