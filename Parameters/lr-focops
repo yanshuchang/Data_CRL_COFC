@@ -1,28 +1,28 @@
-float cost_limit:                the constraint threshold. Default value is 1.50.
+float cost_limit:                The constraint threshold. Default value is 1.50.
 str device:                      The device to use for training and inference, "cpu".
 int thread:                      The number of threads to use for training, ignored if `device` is "cuda".
 int seed:                        The random seed for reproducibility, 10.
-float actor_lr:                  the learning rate of the actor network, 5e-4.
-float critic_lr:                 the learning rate of the critic network, 1e-3.
-Tuple[int, ...]                  hidden_sizes: The sizes of the hidden layers for the policy and value networks, (128, 128).
+float actor_lr:                  The learning rate of the actor network, 5e-4.
+float critic_lr:                 The learning rate of the critic network, 1e-3.
+Tuple[int, ...]                  Hidden_sizes: The sizes of the hidden layers for the policy and value networks, (128, 128).
 bool unbounded:                  Whether the action space is unbounded, False.
-bool last_layer_scale:           whether to scale the last layer output for the policy network, False.
-bool auto_nu:                    whether to automatically tune "nu", the cost coefficient. True.
-Union[float, Tuple[float, float, torch.Tensor]] nu: cost coefficient. It can also be a tuple representing [nu_max, nu_lr, nu]. 0.01.
-float nu_max:                    the max value of the cost coefficient if ``auto_nu`` is True. 2.
-float nu_lr:                     the learning rate of nu if ``auto_nu`` is True. 0.01.
+bool last_layer_scale:           Whether to scale the last layer output for the policy network, False.
+bool auto_nu:                    Whether to automatically tune "nu", the cost coefficient. True.
+Union[float, Tuple[float, float, torch.Tensor]] nu: Cost coefficient. It can also be a tuple representing [nu_max, nu_lr, nu]. 0.01.
+float nu_max:                    The max value of the cost coefficient if ``auto_nu`` is True. 2.
+float nu_lr:                     The learning rate of nu if ``auto_nu`` is True. 0.01.
 float l2_reg:                    L2 regularization rate.  1e-3.
-float delta:                     early stop KL bound. 0.02.
+float delta:                     Early stop KL bound. 0.02.
 float eta:                       KL bound for indicator function. 0.02.
-float tem_lambda:                inverse temperature lambda. 0.95.
+float tem_lambda:                Inverse temperature lambda. 0.95.
 float gae_lambda:                GAE (Generalized Advantage Estimation) lambda for advantage computation.  0.95.
-Optional[float] max_grad_norm:   maximum gradient norm for gradient clipping, if specified. 0.5.
-bool advantage_normalization:    normalize advantage if True. True.
-bool recompute_advantage:        recompute advantage using the updated value function. False.
-float gamma:                     the discount factor for future rewards. 0.98.
-int max_batchsize:               maximum batch size for the optimization. 99999.
-bool reward_normalization:       normalize the rewards if True. False.
-bool deterministic_eval:         whether to use deterministic action selection during evaluation. True.
-bool action_scaling:             whether to scale the actions according to the action space bounds. True.
-str action_bound_method:         the method for handling actions that exceed the action space bounds ("clip" or other custom methods). "clip".
-Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: learning rate scheduler for the optimizer. None.
+Optional[float] max_grad_norm:   Maximum gradient norm for gradient clipping, if specified. 0.5.
+bool advantage_normalization:    Normalize advantage if True. True.
+bool recompute_advantage:        Recompute advantage using the updated value function. False.
+float gamma:                     The discount factor for future rewards. 0.98.
+int max_batchsize:               Maximum batch size for the optimization. 99999.
+bool reward_normalization:       Normalize the rewards if True. False.
+bool deterministic_eval:         Whether to use deterministic action selection during evaluation. True.
+bool action_scaling:             Whether to scale the actions according to the action space bounds. True.
+str action_bound_method:         The method for handling actions that exceed the action space bounds ("clip" or other custom methods). "clip".
+Optional[torch.optim.lr_scheduler.LambdaLR] lr_scheduler: Learning rate scheduler for the optimizer. None.
