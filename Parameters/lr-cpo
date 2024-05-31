@@ -13,7 +13,7 @@ int optim_critic_iters:         The number of iterations to optimize the critic.
 float l2_reg:                   The L2 regularization coefficient. (0.001)
 float gae_lambda:               The lambda parameter for generalized advantage estimation. (0.98)
 bool advantage_normalization:   Whether to normalize advantages. (True)
-float gamma:                    The discount factor for future rewards and costs. (0.99)
+float gamma:                    The discount factor for future rewards and costs.    (0.98)
 int max_batchsize:              The maximum batch size for computing advantages etc. (99999)
 bool reward_normalization:      Whether to normalize rewards. (False)
 bool deterministic_eval:        Whether to use deterministic actions during evaluation. (True)
