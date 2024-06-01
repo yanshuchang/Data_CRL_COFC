@@ -1,1 +1,20 @@
+To read the .plk file, please use the pickle package. For the usage of the 
+pickle package, please refer to 
 
+https://docs.python.org/3/library/pickle.html
+
+The items that we can read are as follows, 
+
+
+'Eng_spd':       engine speed
+'Eng_trq'        engine torque
+'Eng_pwr':       engine power
+'Eng_pwr_opt':   engine optimal power
+'Mot_spd':       motor speed
+'Mot_trq'        motor torque
+'Mot_pwr':       motor power
+'Gen_spd':       generator speed 
+'Gen_trq':       generator torque
+'Gen_pwr':       generator power
+'Batt_pwr':      battery power
+'T': time        step
