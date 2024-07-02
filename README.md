@@ -7,7 +7,7 @@ It includes:
 
 i)   The training results of the Lagrangian-based approaches and CVPO approach.
 
-ii)  The test results of the Lagragian-based approaches and CVPO approach.
+ii)  The test results of the Lagrangian-based approaches and CVPO approach.
 
 iii) The paper's high-resolution figures.
 
